@@ -11,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // --------------------------------------------------
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ISpeciesRepository, SpeciesRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITankRepository, TankRepository>();
 
 // --------------------------------------------------
 // DbContext

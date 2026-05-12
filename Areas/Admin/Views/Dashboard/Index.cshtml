@@ -1,0 +1,39 @@
+﻿@model AlabAqua.Application.ViewModels.Admin.DashboardViewModel
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Welcome to the Admin Dashboard</h2>
+
+<div class="row mt-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>Total Species</h5>
+                <p class="display-6">@Model.TotalSpecies</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>Total Users</h5>
+                <p class="display-6">@Model.TotalUsers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>Total Tanks</h5>
+                <p class="display-6">@Model.TotalTanks</p>
+            </div>
+        </div>
+    </div>
+
+</div>

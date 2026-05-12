@@ -1,0 +1,35 @@
+﻿@model List<AlabAqua.Application.ViewModels.Species.SpeciesViewModel>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Species";
+}
+
+<h2>Species List</h2>
+
+<a href="/Admin/Species/Create" class="btn btn-primary mb-3">Add New Species</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Common Name</th>
+            <th>Scientific Name</th>
+            <th>Description</th>
+            <th style="width: 150px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.CommonName</td>
+                <td>@s.ScientificName</td>
+                <td>@s.Description</td>
+                <td>
+                    <a href="/Admin/Species/Edit/@s.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="/Admin/Species/Delete/@s.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

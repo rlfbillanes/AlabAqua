@@ -1,0 +1,28 @@
+﻿@model AlabAqua.Application.ViewModels.Species.SpeciesViewModel
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Add Species";
+}
+
+<h2>Add New Species</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label>Common Name</label>
+        <input class="form-control" asp-for="CommonName" />
+    </div>
+
+    <div class="mb-3">
+        <label>Scientific Name</label>
+        <input class="form-control" asp-for="ScientificName" />
+    </div>
+
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea class="form-control" asp-for="Description"></textarea>
+    </div>
+
+    <button class="btn btn-success">Save</button>
+    <a href="/Admin/Species" class="btn btn-secondary">Cancel</a>
+</form>
