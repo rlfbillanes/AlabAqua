@@ -1,0 +1,34 @@
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.deps.json
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.runtimeconfig.json
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.dll
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.pdb
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Core.dll
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Core.pdb
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.csproj.AssemblyReference.cache
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.AssemblyInfoInputs.cache
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.AssemblyInfo.cs
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.csproj.CoreCompileInputs.cache
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.448E2D02.Up2Date
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.dll
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\refint\AlabAqua.Infrastructure.dll
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.pdb
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.genruntimeconfig.cache
+D:\My Projects 05.08.2026\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\ref\AlabAqua.Infrastructure.dll
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.deps.json
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.runtimeconfig.json
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.dll
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Infrastructure.pdb
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Core.dll
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\bin\Debug\net8.0\AlabAqua.Core.pdb
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.csproj.AssemblyReference.cache
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.AssemblyInfoInputs.cache
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.AssemblyInfo.cs
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.csproj.CoreCompileInputs.cache
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.448E2D02.Up2Date
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.dll
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\refint\AlabAqua.Infrastructure.dll
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.pdb
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\AlabAqua.Infrastructure.genruntimeconfig.cache
+D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Infrastructure\obj\Debug\net8.0\ref\AlabAqua.Infrastructure.dll
