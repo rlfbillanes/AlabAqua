@@ -1,22 +1,21 @@
-﻿namespace AlabAqua.Core.Entities
+﻿public class UserProfile
 {
-    public class UserProfile
-    {
-        public int Id { get; set; }
-        public string UserId { get; set; } = string.Empty;
+    public Guid Id { get; set; }
+    public Guid UserId { get; set; }
 
-        public string? DisplayName { get; set; }
-        public string? Bio { get; set; }
-        public string? Location { get; set; }
-        public string? AvatarUrl { get; set; }
-        public string? DefaultContactEmail { get; set; }
-        public string? DefaultContactPhone { get; set; }
-        public string? FacebookLink { get; set; }
-        public string? InstagramLink { get; set; }
+    // Required
+    public string DisplayName { get; set; } = default!;
+    public string AvatarUrl { get; set; } = "/images/default-avatar.png";
+    public string Location { get; set; } = default!;
 
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+    // Optional
+    public string? Bio { get; set; }
+    public string? ExperienceLevel { get; set; }
+    public string? FavoriteSpecies { get; set; }
+    public int? AquariumCount { get; set; }
 
-        public User User { get; set; }
-    }
+    public DateTime JoinedDate { get; set; } = DateTime.UtcNow;
+
+    // Navigation
+    public User User { get; set; } = default!;
 }

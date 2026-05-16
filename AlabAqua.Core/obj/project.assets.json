@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My Projects\\Visual Studio Projects 05.08.2026\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\AlabAqua.Core.csproj",
+      "projectUniqueName": "D:\\My Projects\\Visual Studio Projects\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\AlabAqua.Core.csproj",
       "projectName": "AlabAqua.Core",
-      "projectPath": "D:\\My Projects\\Visual Studio Projects 05.08.2026\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\AlabAqua.Core.csproj",
+      "projectPath": "D:\\My Projects\\Visual Studio Projects\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\AlabAqua.Core.csproj",
       "packagesPath": "C:\\Users\\rlfbi\\.nuget\\packages\\",
-      "outputPath": "D:\\My Projects\\Visual Studio Projects 05.08.2026\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\obj\\",
+      "outputPath": "D:\\My Projects\\Visual Studio Projects\\ASP.NET MVC\\AlabAqua\\AlabAqua.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -20,3 +20,15 @@ D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.C
 D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\refint\AlabAqua.Core.dll
 D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.pdb
 D:\My Projects\Visual Studio Projects 05.08.2026\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\ref\AlabAqua.Core.dll
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\bin\Debug\net8.0\AlabAqua.Core.deps.json
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\bin\Debug\net8.0\AlabAqua.Core.dll
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\bin\Debug\net8.0\AlabAqua.Core.pdb
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.AssemblyInfoInputs.cache
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.AssemblyInfo.cs
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.csproj.CoreCompileInputs.cache
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.sourcelink.json
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.dll
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\refint\AlabAqua.Core.dll
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\AlabAqua.Core.pdb
+D:\My Projects\Visual Studio Projects\ASP.NET MVC\AlabAqua\AlabAqua.Core\obj\Debug\net8.0\ref\AlabAqua.Core.dll

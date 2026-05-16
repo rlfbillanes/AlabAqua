@@ -9,10 +9,13 @@
         public byte[]? MediaData { get; set; }
         public string MediaType { get; set; } = string.Empty;
 
-        public string? UploadedBy { get; set; }
-        public DateTime CreatedAt { get; set; }
+        // Updated: FK must match User.Id (Guid)
+        public Guid? UploadedBy { get; set; }
 
-        public Species Species { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        // Navigation
+        public Species Species { get; set; } = default!;
         public User? Uploader { get; set; }
     }
 }

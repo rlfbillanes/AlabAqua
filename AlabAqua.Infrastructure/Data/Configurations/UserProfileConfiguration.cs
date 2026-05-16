@@ -2,47 +2,42 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-public class UserProfileConfiguration : IEntityTypeConfiguration<UserProfile>
+namespace AlabAqua.Infrastructure.Data.Configurations
 {
-    public void Configure(EntityTypeBuilder<UserProfile> builder)
+    public class UserProfileConfiguration : IEntityTypeConfiguration<UserProfile>
     {
-        builder.ToTable("UserProfiles");
+        public void Configure(EntityTypeBuilder<UserProfile> builder)
+        {
+            builder.ToTable("UserProfiles");
 
-        builder.HasKey(p => p.Id);
+            builder.HasKey(p => p.Id);
 
-        builder.Property(p => p.UserId)
-            .IsRequired()
-            .HasMaxLength(255);
+            builder.Property(p => p.DisplayName)
+                .IsRequired()
+                .HasMaxLength(100);
 
-        builder.Property(p => p.DisplayName)
-            .HasMaxLength(255);
+            builder.Property(p => p.AvatarUrl)
+                .IsRequired()
+                .HasMaxLength(500);
 
-        builder.Property(p => p.Location)
-            .HasMaxLength(255);
+            builder.Property(p => p.Location)
+                .IsRequired()
+                .HasMaxLength(150);
 
-        builder.Property(p => p.AvatarUrl)
-            .HasMaxLength(500);
+            builder.Property(p => p.Bio)
+                .HasMaxLength(500);
 
-        builder.Property(p => p.DefaultContactEmail)
-            .HasMaxLength(255);
+            builder.Property(p => p.ExperienceLevel)
+                .HasMaxLength(50);
 
-        builder.Property(p => p.DefaultContactPhone)
-            .HasMaxLength(50);
+            builder.Property(p => p.FavoriteSpecies)
+                .HasMaxLength(100);
 
-        builder.Property(p => p.FacebookLink)
-            .HasMaxLength(255);
+            builder.Property(p => p.AquariumCount);
 
-        builder.Property(p => p.InstagramLink)
-            .HasMaxLength(255);
-
-        // ⭐ FIXED: MySQL-safe CreatedAt
-        builder.Property(p => p.CreatedAt)
-            .HasColumnType("datetime")
-            .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-        // ⭐ FIXED: MySQL-safe UpdatedAt
-        builder.Property(p => p.UpdatedAt)
-            .HasColumnType("datetime")
-            .HasDefaultValueSql("CURRENT_TIMESTAMP");
+            builder.Property(p => p.JoinedDate)
+                .HasColumnType("datetime")
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+        }
     }
 }

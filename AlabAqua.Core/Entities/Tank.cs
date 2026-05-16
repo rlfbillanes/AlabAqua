@@ -3,7 +3,9 @@
     public class Tank
     {
         public int Id { get; set; }
-        public string UserId { get; set; } = string.Empty;
+
+        // FK must match User.Id (Guid)
+        public Guid UserId { get; set; }
 
         public string? Name { get; set; }
         public int? Size { get; set; }
@@ -12,9 +14,10 @@
         public string? Substrate { get; set; }
         public string? Notes { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public User User { get; set; }
+        // Navigation
+        public User User { get; set; } = default!;
         public ICollection<TankSpecies> TankSpecies { get; set; } = new List<TankSpecies>();
     }
 }
