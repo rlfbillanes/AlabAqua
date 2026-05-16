@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlabAqua.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef21a18b14dc32a53d12c8775c050f6a527d3fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65d5e19faf0e357ab59d8d0a36b5ceb0c1d40ef8")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlabAqua.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlabAqua.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

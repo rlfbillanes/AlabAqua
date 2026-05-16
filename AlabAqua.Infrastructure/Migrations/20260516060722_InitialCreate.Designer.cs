@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlabAqua.Infrastructure.Migrations
 {
     [DbContext(typeof(AlabAquaDbContext))]
-    [Migration("20260512151632_InitialCreate")]
+    [Migration("20260516060722_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -68,50 +68,39 @@ namespace AlabAqua.Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AuthorId")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid>("AuthorId")
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Content")
                         .IsRequired()
-                        .HasColumnType("LONGTEXT");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("RejectionReason")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("varchar(500)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)")
-                        .HasDefaultValue("Pending");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("varchar(500)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Articles", (string)null);
+                    b.ToTable("Articles");
                 });
 
             modelBuilder.Entity("AlabAqua.Core.Entities.ArticleSpecies", b =>
@@ -139,24 +128,20 @@ namespace AlabAqua.Infrastructure.Migrations
 
                     b.Property<string>("Action")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("ContentId")
                         .HasColumnType("int");
 
                     b.Property<string>("ContentType")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("ModeratorId")
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid?>("ModeratorId")
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Notes")
                         .HasColumnType("longtext");
@@ -165,7 +150,7 @@ namespace AlabAqua.Infrastructure.Migrations
 
                     b.HasIndex("ModeratorId");
 
-                    b.ToTable("ModerationLogs", (string)null);
+                    b.ToTable("ModerationLogs");
                 });
 
             modelBuilder.Entity("AlabAqua.Core.Entities.Post", b =>
@@ -180,50 +165,38 @@ namespace AlabAqua.Infrastructure.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("ContactEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("ContactPhone")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<bool>("IsForSale")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("PriceText")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("RejectionReason")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)")
-                        .HasDefaultValue("Pending");
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("AlabAqua.Core.Entities.PostMedia", b =>
@@ -351,35 +324,34 @@ namespace AlabAqua.Infrastructure.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<byte[]>("MediaData")
-                        .HasColumnType("LONGBLOB");
+                        .HasColumnType("longblob");
 
                     b.Property<string>("MediaType")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("MediaUrl")
-                        .HasMaxLength(500)
-                        .HasColumnType("varchar(500)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("SpeciesId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UploadedBy")
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid?>("UploadedBy")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid?>("UploaderId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("SpeciesId");
 
-                    b.HasIndex("UploadedBy");
+                    b.HasIndex("UploaderId");
 
-                    b.ToTable("SpeciesMedia", (string)null);
+                    b.ToTable("SpeciesMedia");
                 });
 
             modelBuilder.Entity("AlabAqua.Core.Entities.Tank", b =>
@@ -417,10 +389,9 @@ namespace AlabAqua.Infrastructure.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
+                    b.Property<Guid>("UserId")
                         .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("char(255)");
 
                     b.HasKey("Id");
 
@@ -444,11 +415,11 @@ namespace AlabAqua.Infrastructure.Migrations
                     b.ToTable("TankSpecies", (string)null);
                 });
 
-            modelBuilder.Entity("AlabAqua.Core.Entities.User", b =>
+            modelBuilder.Entity("User", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -460,83 +431,58 @@ namespace AlabAqua.Infrastructure.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<bool>("IsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("tinyint(1)")
-                        .HasDefaultValue(true);
-
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
                 });
 
-            modelBuilder.Entity("AlabAqua.Core.Entities.UserProfile", b =>
+            modelBuilder.Entity("UserProfile", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<int?>("AquariumCount")
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("AvatarUrl")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("varchar(500)");
 
                     b.Property<string>("Bio")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
-                    b.Property<string>("DefaultContactEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("DefaultContactPhone")
+                    b.Property<string>("ExperienceLevel")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("DisplayName")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                    b.Property<string>("FavoriteSpecies")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
-                    b.Property<string>("FacebookLink")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("InstagramLink")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Location")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime>("JoinedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("Location")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -548,8 +494,8 @@ namespace AlabAqua.Infrastructure.Migrations
 
             modelBuilder.Entity("AlabAqua.Core.Entities.Article", b =>
                 {
-                    b.HasOne("AlabAqua.Core.Entities.User", "Author")
-                        .WithMany("Articles")
+                    b.HasOne("User", "Author")
+                        .WithMany()
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -578,18 +524,17 @@ namespace AlabAqua.Infrastructure.Migrations
 
             modelBuilder.Entity("AlabAqua.Core.Entities.ModerationLog", b =>
                 {
-                    b.HasOne("AlabAqua.Core.Entities.User", "Moderator")
-                        .WithMany("ModerationLogs")
-                        .HasForeignKey("ModeratorId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                    b.HasOne("User", "Moderator")
+                        .WithMany()
+                        .HasForeignKey("ModeratorId");
 
                     b.Navigation("Moderator");
                 });
 
             modelBuilder.Entity("AlabAqua.Core.Entities.Post", b =>
                 {
-                    b.HasOne("AlabAqua.Core.Entities.User", "User")
-                        .WithMany("Posts")
+                    b.HasOne("User", "User")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -635,10 +580,9 @@ namespace AlabAqua.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AlabAqua.Core.Entities.User", "Uploader")
-                        .WithMany("UploadedSpeciesMedia")
-                        .HasForeignKey("UploadedBy")
-                        .OnDelete(DeleteBehavior.SetNull);
+                    b.HasOne("User", "Uploader")
+                        .WithMany()
+                        .HasForeignKey("UploaderId");
 
                     b.Navigation("Species");
 
@@ -647,7 +591,7 @@ namespace AlabAqua.Infrastructure.Migrations
 
             modelBuilder.Entity("AlabAqua.Core.Entities.Tank", b =>
                 {
-                    b.HasOne("AlabAqua.Core.Entities.User", "User")
+                    b.HasOne("User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -675,11 +619,11 @@ namespace AlabAqua.Infrastructure.Migrations
                     b.Navigation("Tank");
                 });
 
-            modelBuilder.Entity("AlabAqua.Core.Entities.UserProfile", b =>
+            modelBuilder.Entity("UserProfile", b =>
                 {
-                    b.HasOne("AlabAqua.Core.Entities.User", "User")
+                    b.HasOne("User", "User")
                         .WithOne("Profile")
-                        .HasForeignKey("AlabAqua.Core.Entities.UserProfile", "UserId")
+                        .HasForeignKey("UserProfile", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -714,17 +658,10 @@ namespace AlabAqua.Infrastructure.Migrations
                     b.Navigation("TankSpecies");
                 });
 
-            modelBuilder.Entity("AlabAqua.Core.Entities.User", b =>
+            modelBuilder.Entity("User", b =>
                 {
-                    b.Navigation("Articles");
-
-                    b.Navigation("ModerationLogs");
-
-                    b.Navigation("Posts");
-
-                    b.Navigation("Profile");
-
-                    b.Navigation("UploadedSpeciesMedia");
+                    b.Navigation("Profile")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
