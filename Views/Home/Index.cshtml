@@ -1,8 +1,190 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<style>
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* FULL SCREEN HEIGHT */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #f9fafb;
+        overflow: hidden;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url("https://images.pexels.com/photos/128756/pexels-photo-128756.jpeg") center center / cover no-repeat;
+        z-index: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55); /* DIMMING EFFECT */
+        z-index: 2;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 750px;
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        margin-top: 1rem;
+        color: #e5e7eb;
+    }
+
+    .hero-btn {
+        margin-top: 2rem;
+        padding: 0.9rem 2.6rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+</style>
+
+<section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">A Haven for Fish Lovers</h1>
+        <p class="hero-subtitle">
+            Discover species, share your passion, and connect with a thriving community of aquarists.
+            Whether you're a beginner or a seasoned keeper, this is your underwater home.
+        </p>
+
+        <a href="#community" class="btn btn-primary hero-btn">
+            Join the Community
+        </a>
+    </div>
+</section>
+
+
+<!-- ABOUT / COMMUNITY SECTION -->
+<section id="community" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="section-title">Welcome to Your Aquatic Community</h2>
+        <p class="section-subtitle">
+            Whether you’re just starting your first tank or managing a full aquascape, AlabAqua is your safe space.
+            Learn from others, showcase your setups, and explore a growing library of aquatic species.
+        </p>
+    </div>
+</section>
+
+<!-- FEATURED SPECIES -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Featured Species</h2>
+        <p class="text-center section-subtitle">
+            Get inspired by some of the most loved species in the community. These are just a glimpse of what’s possible.
+        </p>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="https://picsum.photos/400/300?random=21" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Community Favorite #1</h5>
+                        <p class="card-text">A vibrant species often seen in planted tanks and community setups.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="https://picsum.photos/400/300?random=22" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Community Favorite #2</h5>
+                        <p class="card-text">Peaceful, colorful, and perfect for beginners and veterans alike.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="https://picsum.photos/400/300?random=23" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Community Favorite #3</h5>
+                        <p class="card-text">A stunning centerpiece species that brings life to any tank.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">What You’ll Find Here</h2>
+        <p class="text-center section-subtitle">
+            AlabAqua is more than a tool—it’s a shared space for passion, learning, and inspiration.
+        </p>
+
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm bg-white rounded h-100">
+                    <h4>Species Encyclopedia</h4>
+                    <p>Browse and learn about a wide range of freshwater and marine species.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm bg-white rounded h-100">
+                    <h4>Tank Stories</h4>
+                    <p>See how others build, maintain, and evolve their aquariums over time.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm bg-white rounded h-100">
+                    <h4>Community‑Driven Insights</h4>
+                    <p>Tips, experiences, and lessons learned from real fishkeepers like you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center section-title">A Glimpse Underwater</h2>
+        <p class="text-center section-subtitle">
+            A small preview of the beauty our community is obsessed with—clear water, healthy fish, and thriving plants.
+        </p>
+
+        <div class="row g-3">
+            <div class="col-md-3"><img src="https://picsum.photos/400/400?random=31" class="img-fluid rounded shadow-sm" /></div>
+            <div class="col-md-3"><img src="https://picsum.photos/400/400?random=32" class="img-fluid rounded shadow-sm" /></div>
+            <div class="col-md-3"><img src="https://picsum.photos/400/400?random=33" class="img-fluid rounded shadow-sm" /></div>
+            <div class="col-md-3"><img src="https://picsum.photos/400/400?random=34" class="img-fluid rounded shadow-sm" /></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-white" style="background: #111827;">
+    <div class="container text-center">
+        <h2 class="mb-3">Ready to Dive Deeper?</h2>
+        <p class="mb-4">
+            Start exploring species, planning your next tank, or just enjoy being part of a community that understands your obsession.
+        </p>
+        <a href="#community" class="btn btn-outline-light btn-lg px-4">
+            Join the Community
+        </a>
+    </div>
+</section>
